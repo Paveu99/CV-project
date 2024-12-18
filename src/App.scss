@@ -1,11 +1,13 @@
 main {
     height: 90vh;
     width: 80vw;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .cv-main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 10fr;
     grid-template-areas:
         "header header"
@@ -14,21 +16,39 @@ main {
 
 .cv-header {
     grid-area: header;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 234, 235);
+}
+
+.general {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 68, 255, 0.541);
+    padding: 20px;
 }
 
 .cv-aside {
     grid-area: aside;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(0, 68, 255, 0.541);
 }
 
 .cv-section {
     grid-area: section;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(0, 68, 255, 0.877);
+    align-items: flex-start;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 10px;
 }
